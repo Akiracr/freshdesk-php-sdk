@@ -30,6 +30,7 @@ use Freshdesk\Resources\Group;
 use Freshdesk\Resources\Product;
 use Freshdesk\Resources\SLAPolicy;
 use Freshdesk\Resources\Solution;
+use Freshdesk\Resources\Survey;
 use Freshdesk\Resources\Ticket;
 use Freshdesk\Resources\TimeEntry;
 use Freshdesk\Resources\Topic;
@@ -198,7 +199,7 @@ class Api
      * @var Client
      */
     protected $client;
-
+    
     /**
      * @internal
      * @var string
@@ -217,6 +218,14 @@ class Api
      * @var string
      */
     public $result;
+
+    /**
+     * Survey resources
+     *
+     * @api
+     * @var Survey
+     */
+    public $surveys;
 
     /**
      * Constructs a new api instance
