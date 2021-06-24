@@ -201,8 +201,8 @@ class Ticket extends AbstractResource
      * @throws \Freshdesk\Exceptions\UnsupportedAcceptHeaderException
      * @throws \Freshdesk\Exceptions\ValidationException
      */
-    public function create($id, array $data)
+    public function survey($id, array $query = null)
     {
-        return $this->api()->request('POST', $this->endpoint($id . '/satisfaction_ratings'), $data);
+        return $this->api()->request('POST', $this->endpoint($id.'/satisfaction_ratings'), $query);
     }
 }
