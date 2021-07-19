@@ -220,14 +220,6 @@ class Api
     public $result;
 
     /**
-     * Survey resources
-     *
-     * @api
-     * @var Survey
-     */
-    public $surveys;
-
-    /**
      * Constructs a new api instance
      *
      * @api
