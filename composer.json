@@ -1,5 +1,5 @@
 {
-    "name": "luqman7/freshdesk-php-sdk",
+    "name": "runcloudio/freshdesk-php-sdk",
     "description": "PHP SDK for the Freshdesk API (v2)",
     "type": "library",
     "homepage": "https://github.com/RunCloudIO/freshdesk-php-sdk",
