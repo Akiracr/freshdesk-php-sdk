@@ -198,7 +198,7 @@ class Api
      * @var Client
      */
     protected $client;
-
+    
     /**
      * @internal
      * @var string

@@ -183,4 +183,48 @@ class Ticket extends AbstractResource
     {
         return $this->api()->requestMultipart('POST', $this->endpoint(), $data);
     }
+
+    /**
+     * Create a satisfaction rating
+     * 
+     * @param int $id The ticket id
+     * @param array $data
+     * @return mixed|null
+     * @throws \Freshdesk\Exceptions\AccessDeniedException
+     * @throws \Freshdesk\Exceptions\ApiException
+     * @throws \Freshdesk\Exceptions\AuthenticationException
+     * @throws \Freshdesk\Exceptions\ConflictingStateException
+     * @throws \Freshdesk\Exceptions\NotFoundException
+     * @throws \Freshdesk\Exceptions\RateLimitExceededException
+     * @throws \Freshdesk\Exceptions\UnsupportedContentTypeException
+     * @throws \Freshdesk\Exceptions\MethodNotAllowedException
+     * @throws \Freshdesk\Exceptions\UnsupportedAcceptHeaderException
+     * @throws \Freshdesk\Exceptions\ValidationException
+     */
+    public function survey($id, array $query = null)
+    {
+        return $this->api()->request('POST', $this->endpoint($id.'/satisfaction_ratings'), $query);
+    }
+
+    /**
+     * List all satisfaction ratings on ticket
+     * 
+     * @param int $id The ticket id
+     * @param array $data
+     * @return mixed|null
+     * @throws \Freshdesk\Exceptions\AccessDeniedException
+     * @throws \Freshdesk\Exceptions\ApiException
+     * @throws \Freshdesk\Exceptions\AuthenticationException
+     * @throws \Freshdesk\Exceptions\ConflictingStateException
+     * @throws \Freshdesk\Exceptions\NotFoundException
+     * @throws \Freshdesk\Exceptions\RateLimitExceededException
+     * @throws \Freshdesk\Exceptions\UnsupportedContentTypeException
+     * @throws \Freshdesk\Exceptions\MethodNotAllowedException
+     * @throws \Freshdesk\Exceptions\UnsupportedAcceptHeaderException
+     * @throws \Freshdesk\Exceptions\ValidationException
+     */
+    public function listSurvey($id, array $query = null)
+    {
+        return $this->api()->request('GET', $this->endpoint($id.'/satisfaction_ratings'), $query);
+    }
 }
