@@ -313,7 +313,7 @@ class Api
             $request = $this->client->request($method, $url, $options);
 
             $this->headers = $request->getHeaders();
-            $this->results = json_decode($request->getBody(), true);
+            $this->result = json_decode($request->getBody(), true);
             return $this;
         } catch (RequestException $e) {
             throw ApiException::create($e);
